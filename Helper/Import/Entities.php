@@ -211,6 +211,14 @@ class Entities
         $fields = array_diff($fields, ['identifier']);
 
         $table->addColumn(
+            'tmp_id',
+            Table::TYPE_INTEGER,
+            null,
+            ['identity' => true, 'nullable' => false, 'primary' => true],
+            'Temporary primary id'
+        );
+
+        $table->addColumn(
             'identifier',
             Table::TYPE_TEXT,
             255,
