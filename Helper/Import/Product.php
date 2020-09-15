@@ -388,6 +388,8 @@ class Product extends Entities
 
         /* Set entity_id for new entities */
         /** @var string $query */
+        $query = $connection->query('ANALYZE TABLE ' . $entityTable );
+        /** @var string $query */
         $query = $connection->query('SHOW TABLE STATUS LIKE "' . $entityTable . '"');
         /** @var mixed $row */
         $row = $query->fetch();
