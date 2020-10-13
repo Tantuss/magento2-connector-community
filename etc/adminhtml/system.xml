@@ -165,6 +165,17 @@
                         <field id="updated_mode">SINCE LAST N DAYS</field>
                     </depends>
                 </field>
+                <field id="updated_relative" translate="label" type="text" sortOrder="125" showInDefault="1" showInWebsite="0"
+                       showInStore="0">
+                    <label>Updated</label>
+                    <comment>
+                        <![CDATA[Import products updated based on a relative date/time format. Leave blank for no filter.]]>
+                    </comment>
+                    <depends>
+                        <field id="mode">standard</field>
+                        <field id="updated_mode">RELATIVE</field>
+                    </depends>
+                </field>
                 <field id="families" translate="label comment" type="multiselect" sortOrder="130" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Families</label>
                     <source_model>Akeneo\Connector\Model\Source\Filters\Family</source_model>

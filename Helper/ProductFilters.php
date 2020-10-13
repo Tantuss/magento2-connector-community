@@ -356,6 +356,14 @@ class ProductFilters
             }
             $this->searchBuilder->addFilter('updated', $mode, (int)$filter);
         }
+        if ($mode == Update::RELATIVE) {
+            $date = $this->configHelper->getUpdatedRelativeFilter();
+            if (false === strtotime($date) || strtotime($date) > strtotime("now")) {
+                return;
+            }
+            $date = date("Y-m-d H:i:s", strtotime($date));
+            $this->searchBuilder->addFilter('updated', Update::GREATER_THAN, $date);
+        }
         if ($mode == Update::LOWER_THAN) {
             /** @var string $date */
             $date = $this->configHelper->getUpdatedLowerFilter();
