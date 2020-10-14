@@ -56,6 +56,7 @@ class Config
     const PRODUCTS_FILTERS_UPDATED_BETWEEN_AFTER = 'akeneo_connector/products_filters/updated_between_after';
     const PRODUCTS_FILTERS_UPDATED_BETWEEN_BEFORE = 'akeneo_connector/products_filters/updated_between_before';
     const PRODUCTS_FILTERS_UPDATED_SINCE = 'akeneo_connector/products_filters/updated';
+    const PRODUCTS_FILTERS_UPDATED_RELATIVE = 'akeneo_connector/products_filters/updated_relative';
     const PRODUCTS_FILTERS_ADVANCED_FILTER = 'akeneo_connector/products_filters/advanced_filter';
     const PRODUCTS_CATEGORY_IS_ACTIVE = 'akeneo_connector/category/is_active';
     const PRODUCTS_CATEGORY_INCLUDE_IN_MENU = 'akeneo_connector/category/include_in_menu';
@@ -362,6 +363,16 @@ class Config
     public function getUpdatedSinceFilter()
     {
         return $this->scopeConfig->getValue(self::PRODUCTS_FILTERS_UPDATED_SINCE);
+    }
+
+    /**
+     * Retrieve the updated relative filter
+     *
+     * @return string
+     */
+    public function getUpdatedRelativeFilter()
+    {
+        return $this->scopeConfig->getValue(self::PRODUCTS_FILTERS_UPDATED_RELATIVE);
     }
 
     /**
