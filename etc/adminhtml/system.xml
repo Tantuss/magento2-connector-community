@@ -173,7 +173,7 @@
                     </comment>
                     <depends>
                         <field id="mode">standard</field>
-                        <field id="updated_mode">></field>
+                        <field id="updated_mode">&gt;</field>
                     </depends>
                 </field>
                 <field id="families" translate="label comment" type="multiselect" sortOrder="130" showInDefault="1" showInWebsite="0" showInStore="0">
